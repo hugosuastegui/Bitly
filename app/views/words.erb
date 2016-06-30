@@ -1,0 +1,9 @@
+  <h1> He aquí las direcciones guardadas en la base de datos </h1>
+  <% if  @all_urls == [] %>
+  <p> No hay nada en la base de datos </p>
+  <% else %>
+    <% @all_urls.each do |url| %>
+      <span style="color:green">SHORT:</span>
+      <a href="/<%= url.url_short %>"><%= url.url_short %><br><br></a>
+    <% end %>
+  <% end %>
